@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <title>终极井字棋</title>
+  </head>
+  <body>
+    <h1 id="text">终极井字棋</h1>
+
+    <div class="controls">
+      <button id="pvpButton" class="mode active">双人对战</button>
+      <button id="aiButton" class="mode">人机对战</button>
+      <button id="tutorialButton">新手教程</button>
+    </div>
+
+    <div class="difficulty hidden" id="difficulty">
+      <span>难度：</span>
+      <button data-difficulty="easy">简单</button>
+      <button data-difficulty="medium" class="active">中等</button>
+      <button data-difficulty="hard">困难</button>
+    </div>
+
+    <div class="tutorial-panel hidden" id="tutorialPanel">
+      <div class="tutorial-text" id="tutorialText"></div>
+      <div class="tutorial-progress" id="tutorialProgress">步骤 1/6</div>
+      <div class="tutorial-actions">
+        <button id="tutorialNext">下一步</button>
+        <button id="tutorialExit">退出教程</button>
+      </div>
+    </div>
+
+    <div class="turn" id="turn">轮到 X</div>
+
+    <div class="big-board" id="bigBoard"></div>
+
+    <div class="winning-message" id="winningMessage">
+      <div data-winning-message-text></div>
+      <button id="restartButton">重新开始</button>
+    </div>
+  </body>
+</html>
